@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="RoleManager.master.cs" Inherits="RoleManager" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="css/css_role/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/css_role/datepicker3.css" rel="stylesheet"/>
+    <link href="css/css_role/styles.css" rel="stylesheet"/>
+    <script src="js/js_role/jquery-1.11.1.min.js"></script>
+    <script src="js/js_role/bootstrap.min.js"></script>
+    <script src="js/js_role/chart.min.js"></script>
+    <script src="js/js_role/chart-data.js"></script>
+    <script src="js/js_role/easypiechart.js"></script>
+    <script src="js/js_role/easypiechart-data.js"></script>
+    <script src="js/js_role/bootstrap-datepicker.js"></script>
+    <script>
+		$('#calendar').datepicker({
+		});
+
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+		        $(this).find('em:first').toggleClass("glyphicon-minus");
+		    });
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+    </script>	
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../HomePage.aspx"><span>Dream</span>War</a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<input   type="button"  id="buttonname" runat="server" onserverclick="Label_ServerClick"   class="dropdown-toggle" value="User" > 
+                
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+     
+            <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">	 
+		<ul class="nav menu">
+			<li class="active"><a href="RoleIndex.aspx"><span class="glyphicon glyphicon-dashboard"></span> RoleHome</a></li>
+			<li><a href="UpdateFile.aspx"><span class="glyphicon glyphicon-th"></span> UpdateFile</a></li>
+			<li><a href="ModifyPwd.aspx"><span class="glyphicon glyphicon-stats"></span> Modify</a></li>
+			<li><a href="UpInformation.aspx"><span class="glyphicon glyphicon-list-alt"></span> Up Info</a></li>
+			 
+		
+			<li role="presentation" class="divider"></li>
+			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login Page</a></li>
+		</ul>
+		<div class="attribution">Copyright @2017 <a href="http://www.cssmoban.com/" target="_blank"  ">Starrier</a> Designer <a href=" #"   target="_blank">Starrier</a></div>
+	</div><!--/.sidebar-->
+
+
+
+
+
+
+		 
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

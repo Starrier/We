@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Section.master.cs" Inherits="Section" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    	<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-xlarge.css" />
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" >
+    <!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="HomePage.aspx">DreamWar</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="Fantasy.aspx">Fantasy</a></li>
+						<li><a href="Fairy.aspx">Fairy</a></li>
+						<li><a href="EpicWar.aspx">Epic War</a></li>
+						<li><a href ="Narrate.aspx">Narrate World</a></li>
+                        
+						<li><input type="button" id="Login" class="button special" runat="server" onserverclick="Unnamed_ServerClick" value="Login"/></li>
+					</ul>
+				</nav>
+			</header>
+    <section>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        </section>
+    	<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row double">
+						<div class="6u">
+							<div class="row collapse-at-2">
+								<div class="6u">
+									<h3>Last</h3>
+									<ul class="alt">
+										<li><a href="#">Little Red Riding Hood</a></li>
+										<li><a href="#">Snow White</a></li>
+										<li><a href="#">The Frog Price</a></li>
+										<li><a href="#">Aquamarine</a></li>
+									</ul>
+								</div>
+								<div class="6u">
+									<h3>Classsical</h3>
+									<ul class="alt">
+										<li><a href="#">Iron Man</a></li>
+										<li><a href="#">The Little Prince</a></li>
+										<li><a href="#">The Worderful Wizard Of OZ</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="6u">
+							<h2>Recommand</h2>
+							<p> Flipped</p>	
+                            <p>The House On Mango Street</p>
+						</div>
+					</div>
+					<ul class="copyright">
+						<li style="color: #000000">&copy;  Copyright ©2017  Starrier.All rights reserved.</li>
+						<li style="color: #000000">Design: <a href="www.stattier.net">Starrier</a></li>
+					 
+					</ul>
+				</div>
+			</footer>
+        </form>
+</body>
+</html>

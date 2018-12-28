@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DreamWar">
+  <DataContextMoniker Name="/DreamWarDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5a98ea5d-5450-4f22-90b5-a3ad1d5afc48" absoluteBounds="6.125, 2.125, 2, 1.9068933105468751">
+      <DataClassMoniker Name="/DreamWarDataContext/Writers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b935f58b-92b4-48b0-bb78-e1511ce63c7a" absoluteBounds="6.14, 2.585, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="73f4ad31-3369-4470-bc06-5e545327b66e" isExpanded="false" absoluteBounds="1, 0.875, 2, 0.45">
+      <DataClassMoniker Name="/DreamWarDataContext/Articles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="175cabfa-1e8a-4480-b30c-eaebc7f6aea0" absoluteBounds="1.0150000000000001, 1.335, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.96875 : 1.325); (1.96875 : 3.36375549316406); (6.125 : 3.36375549316406)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DreamWarDataContext/Articles/Articles_Writers" />
+      <nodes>
+        <classShapeMoniker Id="73f4ad31-3369-4470-bc06-5e545327b66e" />
+        <classShapeMoniker Id="5a98ea5d-5450-4f22-90b5-a3ad1d5afc48" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9c4bc8f1-e33f-4c1b-9751-7a2b4b6442fa" absoluteBounds="3, 3.875, 2, 2.0916874186197916">
+      <DataClassMoniker Name="/DreamWarDataContext/Message" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d7b05d7-f01c-413b-a0af-b0c433dd1b80" absoluteBounds="3.0149999999999997, 4.335, 1.9700000000000002, 1.5316874186197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63ff4782-0814-49fa-8993-1834e4bbd693" absoluteBounds="7.375, 4.625, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/DreamWarDataContext/table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a2fa40f-ad0d-461d-96cd-baebe8d2b831" absoluteBounds="7.39, 5.085, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78f08131-75ac-4a61-a4c4-90cc100c54aa" absoluteBounds="4.125, 1.5, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/DreamWarDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63041c1f-5f55-4516-a644-8647fd5984d6" absoluteBounds="4.14, 1.96, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

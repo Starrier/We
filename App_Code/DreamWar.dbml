@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Dreamwar" Class="DreamWarDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Dreamwar.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DreamwarConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Writers" Member="Writers">
+    <Type Name="Writers">
+      <Column Name="WriterName" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QQ" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Information" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Association Name="Articles_Writers" Member="Articles" ThisKey="WriterName" OtherKey="Author" Type="Articles" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Articles" Member="Articles">
+    <Type Name="Articles">
+      <Column Name="Atricle_title" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Articles_Writers" Member="Writers" ThisKey="Author" OtherKey="WriterName" Type="Writers" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Message" Member="Message">
+    <Type Name="Message">
+      <Column Name="[ msgId]" Member="_msgId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="msgUser" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="msgTitle" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="msgContent" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="pubDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="typePicPath" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="reply" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[table]" Member="table">
+    <Type Name="table">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="User">
+    <Type Name="User">
+      <Column Name="UserName" Type="System.String" DbType="Char(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Prority" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
